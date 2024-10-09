@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Leaflet Map Example</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+	<style>
+		#map {
+			height: 300px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="map"></div>
+
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+	<script>
+		// Ініціалізуємо мапу на відповідних координатах
+		var map = L.map('map').setView([37.128528, -6.820556], 13);
+
+		// Картка OpenStreetMap
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		// Додаємо маркер на координати
+		L.marker([37.128528, -6.820556]).addTo(map)
+			.bindPopup('MazaBurguer')
+			.openPopup();
+	</script>
+
+</body>
+
+</html>

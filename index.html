@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Bienvenido a MazaBurguer, la mejor hamburguesería gourmet en Mazagón. ¡Conócenos!">
+	<title>MazaBurguer</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+	<!-- Cabecera -->
+	<header>
+		<div class="container">
+			<div class="logo">
+				<a href="#portada">
+					<img src="img/logo.svg" alt="Logo">
+				</a>
+			</div>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="#portada" class="es">Inicio</a><a href="#portada" class="en" style="display: none;">Home</a>
+					</li>
+					<li><a href="#para-picar" class="es">Para Picar</a><a href="#para-picar" class="en"
+							style="display: none;">Starters</a></li>
+					<li><a href="#hamburguesas" class="es">Hamburguesas</a><a href="#hamburguesas" class="en"
+							style="display: none;">Burgers</a></li>
+					<li><a href="#bocadillos" class="es">Bocadillos</a><a href="#bocadillos" class="en"
+							style="display: none;">Sandwiches</a></li>
+					<li><a href="#postres" class="es">Postres</a><a href="#postres" class="en"
+							style="display: none;">Desserts</a></li>
+					<li><a href="#contacto" class="es">Contacto</a><a href="#contacto" class="en"
+							style="display: none;">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="interaction">
+				<div class="lang-switcher">
+					<img src="img/EN.svg" alt="EN" class="language-icon current-lang-icon" data-lang="en">
+					<img src="img/Es.svg" alt="ES" class="language-icon lang-icon" data-lang="es" style="display: none;">
+				</div>
+				<div class="search">
+					<img src="img/search-icon.svg" alt="Search" class="search-icon-img" height="30px">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sección:  portada -->
+	<section id="portada" class="fullscreen-section">
+		<div class="section-container">
+			<div class="amination-wrapper">
+				<img src="img/burguer1.png" alt="Background Image 2" class="background-image" width="250" height="200">
+				<img src="img/burguer2.png" alt="Background Image 1" class="background-image" width="250">
+				<img src="img/burguer3.png" alt="Background Image 3" class="background-image" width="250">
+			</div>
+			<h1 class="es">¡Las Mejores Hamburguesas Gourmet en <span>Mazagón</span>!</h1>
+			<h1 class="en" style="display: none;">The Best Gourmet Burgers in <span>Mazagón</span>!</h1>
+			<p class="es call-to-action">Descubre nuestros platos únicos y ven a visitarnos</p>
+			<p class="en call-to-action" style="display: none;">Discover our unique dishes and come visit us</p>
+			<a href="#para-picar" class="btn es">Ver Menú</a>
+			<a href="#para-picar" class="btn en" style="display: none;">See Menu</a>
+		</div>
+	</section>
+
+	<!-- Sección: Para Picar -->
+	<section id="para-picar" class="fullscreen-section">
+		<img src="img/picar.jpg" alt="Para Picar Imagen" class="section-banner">
+		<div class="section-container">
+			<h2 class="es">Para Picar</h2>
+			<h2 class="en" style="display: none;">Starters</h2>
+			<div class="menu-items">
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/patabaBrava.jpg" alt="Patatas Bravas" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Patatas Bravas</h3>
+						<h3 class="en" style="display: none;">Patatas Bravas</h3>
+						<p class="es">Patatas fritas cubiertas con salsa brava y alioli.</p>
+						<p class="en" style="display: none;">Fried potatoes topped with spicy sauce and aioli.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/alitasPollo.jpg" alt="Alitas de Pollo" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Alitas de Pollo</h3>
+						<h3 class="en" style="display: none;">Chicken Wings</h3>
+						<p class="es">Alitas de pollo marinadas, fritas y servidas con salsa BBQ.</p>
+						<p class="en" style="display: none;">Marinated chicken wings, fried and served with BBQ sauce.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/nachos.jpg" alt="Nachos" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Nachos</h3>
+						<h3 class="en" style="display: none;">Nachos</h3>
+						<p class="es">Tortilla chips con queso fundido, guacamole y jalapeños.</p>
+						<p class="en" style="display: none;">Tortilla chips with melted cheese, guacamole, and jalapeños.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/croqueta.jpg" alt="Croquetas de Jamón" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Croquetas de Jamón</h3>
+						<h3 class="en" style="display: none;">Ham Croquettes</h3>
+						<p class="es">Croquetas caseras de jamón ibérico.</p>
+						<p class="en" style="display: none;">Homemade croquettes with Iberian ham.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/chipirones.jpg" alt="Chipirones Fritos" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Chipirones Fritos</h3>
+						<h3 class="en" style="display: none;">Fried Squids</h3>
+						<p class="es">Calamares fritos crujientes, servidos con limón.</p>
+						<p class="en" style="display: none;">Crispy fried squids, served with lemon.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/gambasAjillo.jpg" alt="Gambas al Ajillo" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Gambas al Ajillo</h3>
+						<h3 class="en" style="display: none;">Garlic Prawns</h3>
+						<p class="es">Gambas salteadas en aceite de oliva con ajo y guindilla.</p>
+						<p class="en" style="display: none;">Prawns sautéed in olive oil with garlic and chili.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/bruschetta.jpg" alt="Bruschetta" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Bruschetta</h3>
+						<h3 class="en" style="display: none;">Bruschetta</h3>
+						<p class="es">Pan tostado con tomate, albahaca y aceite de oliva.</p>
+						<p class="en" style="display: none;">Toasted bread with tomato, basil, and olive oil.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/entrantes/tortilla.jpg" alt="Tortilla Española" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Tortilla Española</h3>
+						<h3 class="en" style="display: none;">Spanish Omelette</h3>
+						<p class="es">Tortilla de patatas con cebolla, servida en porciones.</p>
+						<p class="en" style="display: none;">Potato omelette with onion, served in slices.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección: Hamburguesas -->
+	<section id="hamburguesas" class="fullscreen-section">
+		<img src="img/hamburguesas.jpg" alt="Hamburguesas Imagen" class="section-banner">
+		<div class="section-container">
+			<h2 class="es">Hamburguesas</h2>
+			<h2 class="en" style="display: none;">Burgers</h2>
+			<div class="menu-items">
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/hamburguesas/hambClasica.jpg" alt="Hamburguesa Clásica" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Hamburguesa Clásica</h3>
+						<h3 class="en" style="display: none;">Classic Burger</h3>
+						<p class="es">Carne de res, lechuga, tomate y cebolla en pan brioche.</p>
+						<p class="en" style="display: none;">Beef patty, lettuce, tomato, and onion on brioche bun.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/hamburguesas/hambBBQ.jpg" alt="Hamburguesa BBQ" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Hamburguesa BBQ</h3>
+						<h3 class="en" style="display: none;">BBQ Burger</h3>
+						<p class="es">Carne de res, salsa BBQ, cebolla caramelizada y queso cheddar.</p>
+						<p class="en" style="display: none;">Beef patty, BBQ sauce, caramelized onion, and cheddar cheese.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/hamburguesas/hambVegana.jpg" alt="Hamburguesa Vegana" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Hamburguesa Vegana</h3>
+						<h3 class="en" style="display: none;">Vegan Burger</h3>
+						<p class="es">Hamburguesa de garbanzos con aguacate y espinacas.</p>
+						<p class="en" style="display: none;">Chickpea burger with avocado and spinach.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/hamburguesas/hambPicante.jpg" alt="Hamburguesa Picante" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Hamburguesa Picante</h3>
+						<h3 class="en" style="display: none;">Spicy Burger</h3>
+						<p class="es">Carne de res con salsa picante, jalapeños y queso.</p>
+						<p class="en" style="display: none;">Beef patty with spicy sauce, jalapeños, and cheese.</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/hamburguesas/hambHawaiana.jpg" alt="Hamburguesa Hawaiana" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Hamburguesa Hawaiana</h3>
+						<h3 class="en" style="display: none;">Hawaiian Burger</h3>
+						<p class="es">Carne de res con piña a la parrilla, jamón y queso suizo.</p>
+						<p class="en" style="display: none;">Beef patty with grilled pineapple, ham, and Swiss cheese.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/hamburguesas/hambDoble.jpg" alt="Hamburguesa Doble" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Hamburguesa Doble</h3>
+						<h3 class="en" style="display: none;">Double Burger</h3>
+						<p class="es">Doble carne de res, queso cheddar, lechuga y tomate.</p>
+						<p class="en" style="display: none;">Double beef patty, cheddar cheese, lettuce, and tomato.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Sección: Bocadillos -->
+	<section id="bocadillos" class="fullscreen-section">
+		<img src="img/bocadillos.png" alt="Bocadillos Imagen" class="section-banner">
+		<div class="section-container">
+			<h2 class="es">Bocadillos</h2>
+			<h2 class="en" style="display: none;">Sandwiches</h2>
+			<div class="menu-items">
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/bocadillos/bocHamon.jpg" alt="Bocadillo de Jamón" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Bocadillo de Jamón</h3>
+						<h3 class="en" style="display: none;">Ham Sub-Sandwich</h3>
+						<p class="es">Pan crujiente con jamón ibérico y tomate rallado.</p>
+						<p class="en" style="display: none;">Crispy bread with Iberian ham and grated tomato.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/bocadillos/bocQueso.jpg" alt="Bocadillo de Queso" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Bocadillo de Queso</h3>
+						<h3 class="en" style="display: none;">Cheese Sub-Sandwich</h3>
+						<p class="es">Pan crujiente con queso manchego y aceite de oliva.</p>
+						<p class="en" style="display: none;">Crispy bread with Manchego cheese and olive oil.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/bocadillos/bocTortilla.jpg" alt="Bocadillo de Tortilla" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Bocadillo de Tortilla</h3>
+						<h3 class="en" style="display: none;">Omelette Sub-Sandwich</h3>
+						<p class="es">Pan con tortilla de patatas y cebolla caramelizada.</p>
+						<p class="en" style="display: none;">Bread with potato omelette and caramelized onions.</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/bocadillos/bocSanPollo.jpg" alt="Bocadillo de Pollo" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Sandwich de Pollo</h3>
+						<h3 class="en" style="display: none;">Chicken Sandwich</h3>
+						<p class="es">Pan con pechuga de pollo asado, tomate y mayonesa.</p>
+						<p class="en" style="display: none;">Bread with roasted chicken breast, tomato, and mayonnaise.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/bocadillos/bocSanVegetal.jpg" alt="Bocadillo Vegetal" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Sandwich Vegetal</h3>
+						<h3 class="en" style="display: none;">Vegetable Sandwich</h3>
+						<p class="es">Pan integral con aguacate, espinacas y hummus.</p>
+						<p class="en" style="display: none;">Whole-grain bread with avocado, spinach, and hummus.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Sección: Postres -->
+	<section id="postres" class="fullscreen-section">
+		<img src="img/postres.jpg" alt="Postres Imagen" class="section-banner">
+		<div class="section-container">
+			<h2 class="es">Postres</h2>
+			<h2 class="en" style="display: none;">Desserts</h2>
+			<div class="menu-items">
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/postres/flan.jpg" alt="Flan Casero" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Flan Casero</h3>
+						<h3 class="en" style="display: none;">Homemade Flan</h3>
+						<p class="es">Flan casero con caramelo.</p>
+						<p class="en" style="display: none;">Homemade flan with caramel.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/postres/tarta.jpg" alt="Tarta de Queso" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Tarta de Queso</h3>
+						<h3 class="en" style="display: none;">Cheesecake</h3>
+						<p class="es">Tarta de queso con base de galleta y mermelada.</p>
+						<p class="en" style="display: none;">Cheesecake with a cookie base and jam.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image-wrapper">
+						<img src="img/postres/chocolate.jpg" alt="Coulant de Chocolate" class="product-image">
+					</div>
+					<div class="body-wrapper">
+						<h3 class="es">Coulant de Chocolate</h3>
+						<h3 class="en" style="display: none;">Chocolate Fondant</h3>
+						<p class="es">Bizcocho caliente de chocolate con interior fundido.</p>
+						<p class="en" style="display: none;">Warm chocolate cake with molten center.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección: Contacto -->
+	<section id="contacto" class="fullscreen-section">
+		<div class="section-container">
+			<h2 class="es">Contacto</h2>
+			<h2 class="en" style="display: none;">Contact</h2>
+			<div class="contacto-text">
+				<p class="es">Dirección: Calle Ejemplo, 123, Mazagón</p>
+				<p class="en" style="display: none;">Address: Example Street, 123, Mazagón</p>
+				<p class="es">Teléfono: 123 456 789</p>
+				<p class="en" style="display: none;">Phone: 123 456 789</p>
+			</div>
+			<iframe src="map.html" width="600px" height="270px" style="border:none; margin: 0;"></iframe>
+		</div>
+	</section>
+
+	<!-- Pie de Página -->
+	<footer>
+		<div class="container">
+			<p class="es">&copy; 2024 MazaBurguers. Todos los derechos reservados.</p>
+			<p class="en" style="display: none;">&copy; 2024 MazaBurguers. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
