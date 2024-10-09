@@ -33,14 +33,13 @@ images.forEach((image, index) => {
     }, duration);
   }, duration * 2); // Цикл повторюється з подвоєною тривалістю
 });
-
 // Функція для створення Intersection Observer
 const createObserver = () => {
   const options = {
     root: null, // Відслідковувати вікно перегляду
     threshold: 0.1, // Спрацьовує, коли 10% зображення видно
   };
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const image = entry.target;
@@ -66,13 +65,11 @@ const createObserver = () => {
       }
     });
   }, options);
-
   // Додаємо кожне зображення в спостерігач
   images.forEach((image) => {
     observer.observe(image);
   });
 };
-
 // Запускаємо створення спостерігача при завантаженні сторінки
 window.onload = createObserver;
 
@@ -106,11 +103,51 @@ window.addEventListener("scroll", setActiveLink);
 // Викликаємо функцію при завантаженні сторінки
 document.addEventListener("DOMContentLoaded", setActiveLink);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const langSwitcher = document.querySelector(".lang-switcher");
+  const currentLangIcon = document.querySelector(".current-lang-icon");
+  const otherLangIcon = document.querySelector('.lang-icon[data-lang="es"]');
+  const esElements = document.querySelectorAll(".es");
+  const enElements = document.querySelectorAll(".en");
+
+  langSwitcher.addEventListener("click", function () {
+    // Toggle icons' rotation animation
+    currentLangIcon.classList.toggle("up");
+    otherLangIcon.classList.toggle("down");
+
+    // Swap icons after animation delay
+    setTimeout(() => {
+      const tempSrc = currentLangIcon.src;
+      currentLangIcon.src = otherLangIcon.src;
+      otherLangIcon.src = tempSrc;
+      otherLangIcon.style.display = "none"; // Hide the other language icon
+    }, 300); // Match animation duration
+
+    // Toggle text display for both languages
+    esElements.forEach((el) => {
+      el.style.display = el.style.display === "none" ? "block" : "none";
+    });
+    enElements.forEach((el) => {
+      el.style.display = el.style.display === "none" ? "block" : "none";
+    });
+  });
+
+  // Smooth scrolling for anchor links
+  const navLinks = document.querySelectorAll("a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+});
 let currentSection = 0; // Номер поточної секції
 const sections = document.querySelectorAll(".fullscreen-section");
 let isScrolling = false; // Змінна для контролю прокрутки
 
-// Функція для переходу до секції
 function scrollToSection(index) {
   const targetSection = sections[index];
   if (targetSection && !isScrolling) {
@@ -127,40 +164,20 @@ function scrollToSection(index) {
   }
 }
 
-// Обробка прокрутки мишкою та переходу за посиланнями
-function handleScroll(event) {
+// Обробка події прокрутки
+window.addEventListener("wheel", (event) => {
   if (!isScrolling) {
     // Перевіряємо, чи не прокручуємо
-    if (event.deltaY > 0 || event.type === "click") {
-      // Прокрутка вниз або перехід за посиланням
+    if (event.deltaY > 0) {
+      // Прокрутка вниз
       currentSection = Math.min(currentSection + 1, sections.length - 1);
-    } else if (event.deltaY < 0) {
+    } else {
       // Прокрутка вгору
       currentSection = Math.max(currentSection - 1, 0);
     }
     scrollToSection(currentSection);
-    if (event.type === "wheel") {
-      event.preventDefault(); // Запобігає стандартній прокрутці
-    }
+    event.preventDefault(); // Запобігає стандартній прокрутці
   }
-}
-
-// Додати обробку події прокрутки
-window.addEventListener("wheel", handleScroll);
-
-// Додати обробку переходу за посиланнями
-menuLinks.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault(); // Зупинити стандартну поведінку
-    const targetId = this.getAttribute("href").substring(1); // Отримати id секції
-    const targetIndex = Array.from(sections).findIndex(
-      (section) => section.id === targetId
-    );
-    if (targetIndex !== -1) {
-      currentSection = targetIndex; // Оновлюємо currentSection
-      scrollToSection(currentSection);
-    }
-  });
 });
 
 // Додати обробку клавіш (можна використовувати для навігації)
